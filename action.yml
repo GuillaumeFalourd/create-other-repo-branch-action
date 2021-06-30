@@ -9,14 +9,14 @@ inputs:
     repository_name:
         description: 'Repository Name (e.g: my-repo)'
         required: false
-    access_token:
-        description: 'A PAT that has access to the repository (if necessary)'
-        required: false
     new_branch_name:
         description: 'New branch name created on other repository (e.g: release-*.*.*)'
         required: true
     new_branch_ref:
         description: 'Ref to create the new branch name on other repository (e.g: main)'
+        required: false
+    access_token:
+        description: 'A PAT that has access to the repository (if necessary)'
         required: false
 
 runs:
@@ -30,7 +30,6 @@ runs:
         else
             git clone https://${{ inputs.access_token }}@github.com/${{ inputs.repository_owner }}/${{ inputs.repository_name }}.git
         fi
-
         if [ -d "${{ inputs.repository_name }}" ]; then
             echo "Cloned ${{ inputs.repository_name }} repository successfully."
         else
@@ -51,7 +50,8 @@ runs:
         git config user.name github-actions
         git config user.email github-actions@github.com
         git push origin ${{ inputs.new_branch_name }}
+      shell: bash
 
 branding:
-    icon: 'check'
-    color: 'green'
+    icon: 'git-branch'
+    color: 'blue'
