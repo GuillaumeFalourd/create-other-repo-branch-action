@@ -1,8 +1,6 @@
 name: Action test on Ubuntu
 
-on:
-  push:
-  workflow_dispatch:
+on: [workflow_dispatch]
 
 jobs:
   test-default:
@@ -13,4 +11,11 @@ jobs:
           repository_owner: GuillaumeFalourd
           repository_name: poc-github-actions
           new_branch_name: test-1
+          access_token: ${{ secrets.ACCESS_TOKEN}}
+      - uses: GuillaumeFalourd/create-other-repo-branch-action@main
+        with:
+          repository_owner: GuillaumeFalourd
+          repository_name: poc-github-actions
+          new_branch_name: test-1.1
+          new_branch_ref: test-1
           access_token: ${{ secrets.ACCESS_TOKEN}}

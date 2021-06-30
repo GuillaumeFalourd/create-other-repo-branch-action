@@ -1,8 +1,6 @@
 name: Action test on MacOS
 
-on:
-  push:
-  workflow_dispatch:
+on: [workflow_dispatch]
 
 jobs:
   test-default:
@@ -13,4 +11,11 @@ jobs:
           repository_owner: GuillaumeFalourd
           repository_name: poc-github-actions
           new_branch_name: test-2
+          access_token: ${{ secrets.ACCESS_TOKEN}}
+      - uses: GuillaumeFalourd/create-other-repo-branch-action@main
+        with:
+          repository_owner: GuillaumeFalourd
+          repository_name: poc-github-actions
+          new_branch_name: test-2.1
+          new_branch_ref: test-2
           access_token: ${{ secrets.ACCESS_TOKEN}}
