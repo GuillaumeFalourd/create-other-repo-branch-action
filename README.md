@@ -1,6 +1,8 @@
 # Create other Repository Branch Action
 
-Github Action to create a new branch from one repository to another.
+[![Action test on Ubuntu](https://github.com/GuillaumeFalourd/create-other-repo-branch-action/actions/workflows/ubuntu_test_action.yml/badge.svg)](https://github.com/GuillaumeFalourd/create-other-repo-branch-action/actions/workflows/ubuntu_test_action.yml) [![Action test on MacOS](https://github.com/GuillaumeFalourd/create-other-repo-branch-action/actions/workflows/macos_test_action.yml/badge.svg)](https://github.com/GuillaumeFalourd/create-other-repo-branch-action/actions/workflows/macos_test_action.yml) [![Action test on Windows](https://github.com/GuillaumeFalourd/create-other-repo-branch-action/actions/workflows/windows_test_action.yml/badge.svg)](https://github.com/GuillaumeFalourd/create-other-repo-branch-action/actions/workflows/windows_test_action.yml)
+
+Github Action to create a new branch on another repository 🚀📦
 
 * * *
 
