@@ -12,6 +12,11 @@ jobs:
           repository_name: poc-github-actions
           new_branch_name: test-3
           access_token: ${{ secrets.ACCESS_TOKEN}}
+
+  test-specific:
+    runs-on: windows-latest
+    needs: test-default
+    steps:
       - uses: GuillaumeFalourd/create-other-repo-branch-action@main
         with:
           repository_owner: GuillaumeFalourd
