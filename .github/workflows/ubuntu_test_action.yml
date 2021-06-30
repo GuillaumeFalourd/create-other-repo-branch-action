@@ -1,0 +1,16 @@
+name: Action test on Ubuntu
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test-default:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: GuillaumeFalourd/create-other-repo-branch-action@main
+        with:
+          repository_owner: GuillaumeFalourd
+          repository_name: poc-github-actions
+          new_branch_name: test
+          access_token: ${{ secrets.ACCESS_TOKEN}}

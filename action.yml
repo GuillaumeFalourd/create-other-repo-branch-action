@@ -1,0 +1,57 @@
+name: 'Test CLI commands Action'
+
+description: 'Github Action to test or check outputs of CLI commands 🕵️⚙️🖥'
+
+inputs:
+    repository_owner:
+        description: 'Repository Owner (e.g: octocat)'
+        required: true
+    repository_name:
+        description: 'Repository Name (e.g: my-repo)'
+        required: false
+    access_token:
+        description: 'A PAT that has access to the repository (if necessary)'
+        required: false
+    new_branch_name:
+        description: 'New branch name created on other repository (e.g: release-*.*.*)'
+        required: true
+    new_branch_ref:
+        description: 'Ref to create the new branch name on other repository (e.g: main)'
+        required: false
+
+runs:
+  using: "composite"
+  steps:
+
+    - name: Clone informed repository
+      run: |
+        if [ -z "${{ inputs.access_token }}" ]; then
+            git clone https://github.com/${{ inputs.repository_owner }}/${{ inputs.repository_name }}.git
+        else
+            git clone https://${{ inputs.access_token }}@github.com/${{ inputs.repository_owner }}/${{ inputs.repository_name }}.git
+        fi
+
+        if [ -d "${{ inputs.repository_name }}" ]; then
+            echo "Cloned ${{ inputs.repository_name }} repository successfully."
+        else
+            echo "Error: Couldn't clone ${{ inputs.repository_name }} repository. Check the inputs or the PAT scope."
+            exit 1
+        fi
+      shell: bash
+
+    - name: Create new branch
+      run: |
+        cd ${{ inputs.repository_name }}
+        git init
+        if [ -z "${{ inputs.new_branch_ref }}" ]; then
+            git fetch -a
+            git checkout ${{ inputs.new_branch_ref }}
+        fi
+        git checkout -b ${{ inputs.new_branch_name }}
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git push origin ${{ inputs.new_branch_name }}
+
+branding:
+    icon: 'check'
+    color: 'green'
