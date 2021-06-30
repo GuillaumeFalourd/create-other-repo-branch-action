@@ -4,7 +4,7 @@
 
 ![title](https://user-images.githubusercontent.com/22433243/124029399-7d608c80-d9cb-11eb-9f78-48524007ac3d.png)
 
-Github Action to create a new branch on another repository 🚀📦
+Github Action to create a new branch on another repository 🆕🚀
 
 * * *
 

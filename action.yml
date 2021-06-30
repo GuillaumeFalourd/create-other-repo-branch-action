@@ -1,6 +1,6 @@
-name: 'Test CLI commands Action'
+name: 'Create Other Repo Branch Action'
 
-description: 'Github Action to create a new branch on another repository 🚀📦'
+description: 'Github Action to create a new branch on another repository 🆕🚀'
 
 inputs:
     repository_owner:
