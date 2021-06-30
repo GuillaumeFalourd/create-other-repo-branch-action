@@ -18,11 +18,11 @@ Github Action to create a new branch on another repository 🆕🚀
 
 _⚠️ Don't use this action to create a branch from the same repository. To do so, [other actions on the marketplace are more efficient](https://github.com/marketplace?type=actions&query=create+branch+)._
 
-### Creating new branch on another repository using `default branch` as reference
+#### Creating new branch on another repository using `default branch` as reference
 
 ```yaml
     steps:
-      - uses: GuillaumeFalourd/create-other-repo-branch-action@main
+      - uses: GuillaumeFalourd/create-other-repo-branch-action@v1
         with:
           repository_owner: GuillaumeFalourd
           repository_name: poc-github-actions
@@ -30,11 +30,11 @@ _⚠️ Don't use this action to create a branch from the same repository. To do
           access_token: ${{ secrets.ACCESS_TOKEN}}
 ```
 
-### Creating new branch on another repository using `a specific branch` as reference
+#### Creating new branch on another repository using `a specific branch` as reference
 
 ```yaml
     steps:
-      - uses: GuillaumeFalourd/create-other-repo-branch-action@main
+      - uses: GuillaumeFalourd/create-other-repo-branch-action@v1
         with:
           repository_owner: GuillaumeFalourd
           repository_name: poc-github-actions
