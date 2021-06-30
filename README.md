@@ -53,7 +53,7 @@ Field | Mandatory | Observation
 **repository_name** | YES | Repository Name <br/> _e.g: `my-repo-name`_
 **new_branch_name** | YES | New branch name created on other repository <br/> _e.g: `release-*.*.*`_
 **new_branch_ref** | NO | Reference to create the new branch name on other repository <br/> _e.g: `main` (the `default branch` is used if not informed)_
-**access_token** | NO | A [PAT](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) that has access to the repository (if necessary)._
+**access_token** | NO | A [PAT](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) that has access to the repository (if necessary).
 
 * * *
 
