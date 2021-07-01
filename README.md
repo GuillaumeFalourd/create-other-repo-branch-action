@@ -12,9 +12,9 @@ Github Action to create a new branch on another repository 🆕🚀
 
 ☞ [Who is using this action? 🧑‍💻](https://github.com/search?q=GuillaumeFalourd+create-other-repo-branch-action+path%3A.github%2Fworkflows+language%3AYAML&type=code)
 
-### How does the action work?
+## ⚙️ How does the action work?
 
-## ♻️ Scenarios
+### ♻️ Scenarios
 
 _⚠️  Don't use this action to create a branch from the same repository! To do so, [other actions on the marketplace are more efficient](https://github.com/marketplace?type=actions&query=create+branch+). You can also do it with the [actions/checkout](https://github.com/actions/checkout) and `git` commands._
 
