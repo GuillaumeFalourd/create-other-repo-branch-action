@@ -14,7 +14,7 @@ Github Action to create a new branch on another repository 🆕🚀
 
 ## ⚙️ How does the action work?
 
-_⚠️  Don't use this action to create a branch from the same repository! To do so, [other actions on the marketplace are more efficient](https://github.com/marketplace?type=actions&query=create+branch+). You can also do it with the [actions/checkout](https://github.com/actions/checkout) and `git` commands._
+_⚠️  Don't use this action to create a branch on the same repository! To do so, [other actions on the marketplace are more efficient](https://github.com/marketplace?type=actions&query=create+branch+). You can also do it with the [actions/checkout](https://github.com/actions/checkout) and `git` commands._
 
 ### ♻️ Scenarios
 
