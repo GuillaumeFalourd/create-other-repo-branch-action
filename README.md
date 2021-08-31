@@ -1,6 +1,6 @@
 # Create Other Repo Branch Action
 
-[![Action test on Ubuntu](https://github.com/GuillaumeFalourd/create-other-repo-branch-action/actions/workflows/ubuntu_test_action.yml/badge.svg)](https://github.com/GuillaumeFalourd/create-other-repo-branch-action/actions/workflows/ubuntu_test_action.yml) [![Action test on MacOS](https://github.com/GuillaumeFalourd/create-other-repo-branch-action/actions/workflows/macos_test_action.yml/badge.svg)](https://github.com/GuillaumeFalourd/create-other-repo-branch-action/actions/workflows/macos_test_action.yml) [![Action test on Windows](https://github.com/GuillaumeFalourd/create-other-repo-branch-action/actions/workflows/windows_test_action.yml/badge.svg)](https://github.com/GuillaumeFalourd/create-other-repo-branch-action/actions/workflows/windows_test_action.yml)
+[![Public workflows that use this action.](https://img.shields.io/endpoint?url=https%3A%2F%2Fapi-endbug.vercel.app%2Fapi%2Fgithub-actions%2Fused-by%3Faction%3DGuillaumeFalourd%2Fcreate-other-repo-branch-action%26badge%3Dtrue)](https://github.com/search?o=desc&q=GuillaumeFalourd+create-other-repo-branch-action+path%3A.github%2Fworkflows+language%3AYAML&s=&type=Code) [![Action test on Ubuntu](https://github.com/GuillaumeFalourd/create-other-repo-branch-action/actions/workflows/ubuntu_test_action.yml/badge.svg)](https://github.com/GuillaumeFalourd/create-other-repo-branch-action/actions/workflows/ubuntu_test_action.yml) [![Action test on MacOS](https://github.com/GuillaumeFalourd/create-other-repo-branch-action/actions/workflows/macos_test_action.yml/badge.svg)](https://github.com/GuillaumeFalourd/create-other-repo-branch-action/actions/workflows/macos_test_action.yml) [![Action test on Windows](https://github.com/GuillaumeFalourd/create-other-repo-branch-action/actions/workflows/windows_test_action.yml/badge.svg)](https://github.com/GuillaumeFalourd/create-other-repo-branch-action/actions/workflows/windows_test_action.yml)
 
 ![title](https://user-images.githubusercontent.com/22433243/124029399-7d608c80-d9cb-11eb-9f78-48524007ac3d.png)
 
@@ -9,8 +9,6 @@ Github Action to create a new branch on another repository 🆕🚀
 * * *
 
 ## 📚 Usage
-
-☞ [Who is using this action? 🧑‍💻](https://github.com/search?q=GuillaumeFalourd+create-other-repo-branch-action+path%3A.github%2Fworkflows+language%3AYAML&type=code)
 
 ## ⚙️ How does the action work?
 
