@@ -46,6 +46,11 @@ runs:
             git fetch -a
             git checkout ${{ inputs.new_branch_ref }}
         fi
+        
+        if [ -n $(git branch --remotes --list 'origin/${{ inputs.new_branch_name }}') ]; then
+            echo "Error: The branch name ${{ inputs.new_branch_name }} is already used."
+            exit 1
+        fi
         git checkout -b ${{ inputs.new_branch_name }}
         git config user.name github-actions
         git config user.email github-actions@github.com
