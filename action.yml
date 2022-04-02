@@ -42,7 +42,7 @@ runs:
       run: |
         cd ${{ inputs.repository_name }}
         git init
-        if [ -z "${{ inputs.new_branch_ref }}" ]; then
+        if [ -n "${{ inputs.new_branch_ref }}" ]; then
             git fetch -a
             git checkout ${{ inputs.new_branch_ref }}
         fi
