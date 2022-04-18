@@ -47,7 +47,7 @@ runs:
             git checkout ${{ inputs.new_branch_ref }}
         fi
         
-        if [ -n $(git branch --remotes --list 'origin/${{ inputs.new_branch_name }}') ]; then
+        if [ ! -z $(git branch --remotes --list 'origin/${{ inputs.new_branch_name }}') ]; then
             echo "Error: The branch name ${{ inputs.new_branch_name }} is already used."
             exit 1
         fi
