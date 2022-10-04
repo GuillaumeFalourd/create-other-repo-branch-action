@@ -18,7 +18,9 @@ inputs:
     access_token:
         description: 'A PAT that has access to the repository (if necessary)'
         required: false
-
+    ignore_branch_exists:
+        description: 'If the branch already exists then do not attempt to create branch'
+        required: false
 runs:
   using: "composite"
   steps:
@@ -46,7 +48,12 @@ runs:
             git fetch -a
             git checkout ${{ inputs.new_branch_ref }}
         fi
-        
+
+        if ${{ inputs.ignore_branch_exists }} && [ ! -z $(git branch --remotes --list 'origin/${{ inputs.new_branch_name }}') ]; then
+            echo "[INFO] Branch ${{ inputs.new_branch_ref }} already exists. Skipping branch creation"
+            exit 0
+        fi
+
         if [ ! -z $(git branch --remotes --list 'origin/${{ inputs.new_branch_name }}') ]; then
             echo "Error: The branch name ${{ inputs.new_branch_name }} is already used."
             exit 1
