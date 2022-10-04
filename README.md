@@ -60,6 +60,12 @@ Field | Mandatory | Observation
 
 ☞ [Guidelines](https://github.com/GuillaumeFalourd/create-other-repo-branch-action/blob/main/CONTRIBUTING.md)
 
+<a href="https://github.com/GuillaumeFalourd/create-other-repo-branch-action/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=GuillaumeFalourd/create-other-repo-branch-action" />
+</a>
+
+(Made with [contributors-img](https://contrib.rocks))
+
 ## 🏅 Licensed
 
 ☞ This repository uses the [Apache License 2.0](https://github.com/GuillaumeFalourd/create-other-repo-branch-action/blob/main/LICENSE)
