@@ -52,6 +52,7 @@ Field | Mandatory | Observation
 **new_branch_name** | YES | New branch name created on other repository <br/> _e.g: `release-*.*.*`_
 **new_branch_ref** | NO | Reference to create the new branch name on other repository <br/> _e.g: `release-candidate` (the `default branch` is used if not informed)_
 **access_token** | NO | A [PAT](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) that has access to the repository (if necessary).
+**ignore_branch_exists** | NO | This (boolean) field will gracefully skip branch creation if the requested branch already exists <br/> _e.g: `true`_
 
 * * *
 
