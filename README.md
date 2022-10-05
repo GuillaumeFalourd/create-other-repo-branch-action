@@ -51,8 +51,9 @@ Field | Mandatory | Observation
 **repository_name** | YES | Repository Name <br/> _e.g: `my-repo-name`_
 **new_branch_name** | YES | New branch name created on other repository <br/> _e.g: `release-*.*.*`_
 **new_branch_ref** | NO | Reference to create the new branch name on other repository <br/> _e.g: `release-candidate` (the `default branch` is used if not informed)_
-**access_token** | NO | A [PAT](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) that has access to the repository (if necessary).
+**access_token** | NO | A [PAT](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) that has access to the repository (if necessary). Note: this should not be combined with `ssh_deploy_key`. 
 **ignore_branch_exists** | NO | This (boolean) field will gracefully skip branch creation if the requested branch already exists <br/> _e.g: `true`_
+**ssh_deploy_key** | NO | A [Deploy Key](https://docs.github.com/en/developers/overview/managing-deploy-keys) that has been configured to allow access from the source to destination repository. (if necessary) Note: this should not be combined with `access_token`. 
 
 * * *
 
