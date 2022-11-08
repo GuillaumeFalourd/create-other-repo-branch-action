@@ -1,6 +1,6 @@
 name: Action test on MacOS
 
-on: [workflow_dispatch]
+on: [push, workflow_dispatch]
 
 jobs:
   test-default:
