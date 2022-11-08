@@ -20,7 +20,7 @@ _⚠️  Don't use this action to create a branch on the same repository! To do 
 
 ```yaml
     steps:
-      - uses: GuillaumeFalourd/create-other-repo-branch-action@v1.4
+      - uses: GuillaumeFalourd/create-other-repo-branch-action@v1.5
         with:
           repository_owner: GuillaumeFalourd
           repository_name: poc-github-actions
@@ -32,7 +32,7 @@ _⚠️  Don't use this action to create a branch on the same repository! To do 
 
 ```yaml
     steps:
-      - uses: GuillaumeFalourd/create-other-repo-branch-action@v1.4
+      - uses: GuillaumeFalourd/create-other-repo-branch-action@v1.5
         with:
           repository_owner: GuillaumeFalourd
           repository_name: poc-github-actions
