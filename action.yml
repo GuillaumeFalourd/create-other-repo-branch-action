@@ -79,7 +79,7 @@ runs:
             git checkout ${{ inputs.new_branch_ref }}
         fi
 
-        if ${{ inputs.ignore_branch_exists }} && [ ! -z $(git branch --remotes --list 'origin/${{ inputs.new_branch_name }}') ]; then
+        if [ ! -z "${{ inputs.ignore_branch_exists }}" ] && [ ! -z $(git branch --remotes --list 'origin/${{ inputs.new_branch_name }}') ]; then
             echo "[INFO] Branch ${{ inputs.new_branch_ref }} already exists. Skipping branch creation"
             exit 0
         fi
