@@ -24,6 +24,14 @@ inputs:
     ssh_deploy_key:
         description: 'Allows cloning of git reposorties via SSH Key. Not to be combined with access_token'
         required: false
+    git_user_name:
+        description: 'Allows setting user.name in git config'
+        required: false
+        default: github-actions
+    git_user_email:
+        description: 'Allows setting user.email in git config'
+        required: false
+        default: github-actions@github.com
 runs:
   using: "composite"
   steps:
@@ -81,8 +89,8 @@ runs:
             exit 1
         fi
         git checkout -b ${{ inputs.new_branch_name }}
-        git config user.name github-actions
-        git config user.email github-actions@github.com
+        git config user.name ${{ inputs.git_user_name }}
+        git config user.email ${{ inputs.git_user_email }}
         git push origin ${{ inputs.new_branch_name }}
       shell: bash
 

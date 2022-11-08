@@ -54,7 +54,8 @@ Field | Mandatory | Observation
 **access_token** | NO | A [PAT](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) that has access to the repository (if necessary). Note: this should not be combined with `ssh_deploy_key`. 
 **ignore_branch_exists** | NO | This (boolean) field will gracefully skip branch creation if the requested branch already exists <br/> _e.g: `true`_
 **ssh_deploy_key** | NO | A [Deploy Key](https://docs.github.com/en/developers/overview/managing-deploy-keys) that has been configured to allow access from the source to destination repository. (if necessary) Note: this should not be combined with `access_token`. 
-
+**git_user_name** | NO | Specify the user.name to set in the git config
+**git_user_email** | NO | Specify the user.email to set in the git config
 * * *
 
 ## 🤝 Contributing
