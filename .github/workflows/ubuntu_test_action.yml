@@ -12,6 +12,7 @@ jobs:
           repository_name: poc-github-actions
           new_branch_name: test-1
           access_token: ${{ secrets.ACCESS_TOKEN}}
+          ignore_branch_exists: true
 
   test-specific:
     runs-on: ubuntu-latest
@@ -24,3 +25,4 @@ jobs:
           new_branch_name: test-1.1
           new_branch_ref: test-1
           access_token: ${{ secrets.ACCESS_TOKEN}}
+          ignore_branch_exists: true
